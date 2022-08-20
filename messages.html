@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <script defer src="src/js/license.js"></script>
+
+
+    <style>
+        main {
+            background-color: black;
+            border-radius: 5px;
+            padding: 20px 30px;
+        }
+
+        h2 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            font-family: 'Poppins';
+            font-weight: 700;
+            line-height: 30px;
+
+            text-transform: uppercase;
+
+            color: #FFFFFF;
+            margin-bottom: 30px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+        }
+
+        .messagesTitle {
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: justify;
+
+            color: #FFFFFF;
+
+            width: 100%;
+            max-width: 60vw;
+            margin-bottom: 20px;
+            /* display: inline-block; */
+        }
+
+        .messagesTitle span {
+            color: #00FFC2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="left">
+            <a href="index.html">
+                <img class="logo" src="src/img/logo.svg" alt="logo">
+            </a>
+            <menu>
+                <ul>
+                    <li>
+                        <a href="index.html" class="menu_item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="path-1-inside-1_101_3" fill="white">
+                                    <rect width="6.31579" height="9.16667" rx="1" />
+                                </mask>
+                                <rect width="6.31579" height="9.16667" rx="1" fill="white" stroke="white"
+                                    stroke-width="4" mask="url(#path-1-inside-1_101_3)" />
+                                <mask id="path-2-inside-2_101_3" fill="white">
+                                    <rect x="7.36841" width="12.6316" height="7.5" rx="1" />
+                                </mask>
+                                <rect x="7.36841" width="12.6316" height="7.5" rx="1" fill="white" stroke="white"
+                                    stroke-width="4" mask="url(#path-2-inside-2_101_3)" />
+                                <mask id="path-3-inside-3_101_3" fill="white">
+                                    <rect x="7.36841" y="9.16669" width="12.6316" height="10.8333" rx="1" />
+                                </mask>
+                                <rect x="7.36841" y="9.16669" width="12.6316" height="10.8333" rx="1" fill="white"
+                                    stroke="white" stroke-width="4" mask="url(#path-3-inside-3_101_3)" />
+                                <mask id="path-4-inside-4_101_3" fill="white">
+                                    <rect y="10.8333" width="6.31579" height="9.16667" rx="1" />
+                                </mask>
+                                <rect y="10.8333" width="6.31579" height="9.16667" rx="1" fill="white" stroke="white"
+                                    stroke-width="4" mask="url(#path-4-inside-4_101_3)" />
+                            </svg>
+                            <span>
+                                Dashboard
+                            </span>
+                            <div class="dashCollapse hide">
+                                <svg width="25" height="6" viewBox="0 0 25 6" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0L24.1913 5.25L0.808657 5.25L12.5 0Z" fill="white" />
+                                </svg>
+
+                            </div>
+
+
+                        </a>
+
+                        <div class="dashFilters hide">
+                            <div class="checkFilter hide">
+                                <input type="checkbox" name="btc" id="btc">
+                                <label for="btc">BTC</label>
+                            </div>
+                            <div class="checkFilter hide">
+                                <input checked type="checkbox" name="usdt" id="usdt">
+                                <label for="usdt">USDT</label>
+                            </div>
+                            <div class="checkFilter hide">
+                                <input type="checkbox" name="btc" id="eth">
+                                <label for="eth">ETH</label>
+                            </div>
+                            <div class="checkFilter hide">
+                                <input type="checkbox" name="ltc" id="ltc">
+                                <label for="ltc">LTC</label>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html" class="menu_item ">
+                            <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.8333 3.33331H3.16667C2.24619 3.33331 1.5 4.07951 1.5 4.99998V16.6666C1.5 17.5871 2.24619 18.3333 3.16667 18.3333H14.8333C15.7538 18.3333 16.5 17.5871 16.5 16.6666V4.99998C16.5 4.07951 15.7538 3.33331 14.8333 3.33331Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12.3334 1.66669V5.00002" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5.66663 1.66669V5.00002" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M1.5 8.33331H16.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>
+                                Appointments
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="menu_item fill ">
+                            <svg width="17" height="19" viewBox="0 0 17 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.71429 0H2.35714V2.35714H0V16.5H2.35714V18.8571H4.71429V16.5H7.07143V2.35714H4.71429V0ZM16.5 4.71429H14.1429V0H11.7857V4.71429H9.42857V12.9643H11.7857V18.8571H14.1429V12.9643H16.5V4.71429Z"
+                                    fill="white" />
+                            </svg>
+                            <span>
+                                Setting market
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="menu_item ">
+                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.66671 1.66666H3.00004C2.55801 1.66666 2.13409 1.84225 1.82153 2.15481C1.50897 2.46737 1.33337 2.8913 1.33337 3.33332V16.6667C1.33337 17.1087 1.50897 17.5326 1.82153 17.8452C2.13409 18.1577 2.55801 18.3333 3.00004 18.3333H13C13.4421 18.3333 13.866 18.1577 14.1786 17.8452C14.4911 17.5326 14.6667 17.1087 14.6667 16.6667V6.66666L9.66671 1.66666Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.66663 1.66666V6.66666H14.6666" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11.3333 10.8333H4.66663" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11.3333 14.1667H4.66663" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.33329 7.5H5.49996H4.66663" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>
+                                Documents
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="menu_item active">
+                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.33329 1.33334H16.6666C17.5833 1.33334 18.3333 2.08334 18.3333 3.00001V13C18.3333 13.9167 17.5833 14.6667 16.6666 14.6667H3.33329C2.41663 14.6667 1.66663 13.9167 1.66663 13V3.00001C1.66663 2.08334 2.41663 1.33334 3.33329 1.33334Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M18.3333 3L9.99996 8.83333L1.66663 3" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>
+                                Messages
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html" class="menu_item">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11 13.5C12.3807 13.5 13.5 12.3807 13.5 11C13.5 9.61929 12.3807 8.5 11 8.5C9.61929 8.5 8.5 9.61929 8.5 11C8.5 12.3807 9.61929 13.5 11 13.5Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M17.1667 13.5C17.0558 13.7514 17.0227 14.0302 17.0717 14.3005C17.1207 14.5708 17.2496 14.8203 17.4417 15.0167L17.4917 15.0667C17.6467 15.2215 17.7696 15.4053 17.8535 15.6076C17.9373 15.8099 17.9805 16.0268 17.9805 16.2458C17.9805 16.4649 17.9373 16.6817 17.8535 16.8841C17.7696 17.0864 17.6467 17.2702 17.4917 17.425C17.3369 17.58 17.1531 17.7029 16.9508 17.7868C16.7484 17.8707 16.5316 17.9138 16.3125 17.9138C16.0935 17.9138 15.8766 17.8707 15.6743 17.7868C15.472 17.7029 15.2882 17.58 15.1334 17.425L15.0834 17.375C14.887 17.1829 14.6375 17.054 14.3672 17.005C14.0969 16.956 13.8181 16.9891 13.5667 17.1C13.3202 17.2056 13.11 17.381 12.962 17.6046C12.8139 17.8282 12.7344 18.0902 12.7334 18.3583V18.5C12.7334 18.942 12.5578 19.366 12.2452 19.6785C11.9327 19.9911 11.5087 20.1667 11.0667 20.1667C10.6247 20.1667 10.2008 19.9911 9.8882 19.6785C9.57564 19.366 9.40004 18.942 9.40004 18.5V18.425C9.39359 18.1492 9.30431 17.8817 9.1438 17.6573C8.98329 17.4328 8.75899 17.2619 8.50004 17.1667C8.24869 17.0557 7.96988 17.0227 7.69955 17.0717C7.42922 17.1207 7.17977 17.2496 6.98337 17.4417L6.93337 17.4917C6.77859 17.6466 6.59477 17.7696 6.39244 17.8534C6.19011 17.9373 5.97323 17.9805 5.75421 17.9805C5.53518 17.9805 5.3183 17.9373 5.11597 17.8534C4.91364 17.7696 4.72983 17.6466 4.57504 17.4917C4.42008 17.3369 4.29715 17.1531 4.21327 16.9507C4.1294 16.7484 4.08623 16.5315 4.08623 16.3125C4.08623 16.0935 4.1294 15.8766 4.21327 15.6743C4.29715 15.4719 4.42008 15.2881 4.57504 15.1333L4.62504 15.0833C4.81715 14.8869 4.94603 14.6375 4.99504 14.3672C5.04406 14.0968 5.01097 13.818 4.90004 13.5667C4.7944 13.3202 4.619 13.11 4.39543 12.9619C4.17185 12.8139 3.90986 12.7344 3.64171 12.7333H3.50004C3.05801 12.7333 2.63409 12.5577 2.32153 12.2452C2.00897 11.9326 1.83337 11.5087 1.83337 11.0667C1.83337 10.6246 2.00897 10.2007 2.32153 9.88817C2.63409 9.57561 3.05801 9.40001 3.50004 9.40001H3.57504C3.85087 9.39356 4.11838 9.30428 4.34279 9.14377C4.5672 8.98326 4.73814 8.75896 4.83337 8.50001C4.9443 8.24866 4.97739 7.96985 4.92838 7.69952C4.87936 7.42919 4.75049 7.17974 4.55837 6.98334L4.50837 6.93334C4.35341 6.77856 4.23048 6.59474 4.14661 6.39241C4.06273 6.19008 4.01956 5.9732 4.01956 5.75418C4.01956 5.53515 4.06273 5.31827 4.14661 5.11594C4.23048 4.91361 4.35341 4.7298 4.50837 4.57501C4.66316 4.42005 4.84698 4.29712 5.04931 4.21324C5.25164 4.12937 5.46852 4.0862 5.68754 4.0862C5.90657 4.0862 6.12344 4.12937 6.32577 4.21324C6.5281 4.29712 6.71192 4.42005 6.86671 4.57501L6.91671 4.62501C7.11311 4.81712 7.36255 4.946 7.63288 4.99501C7.90321 5.04403 8.18203 5.01094 8.43337 4.90001H8.50004C8.74652 4.79437 8.95672 4.61897 9.10478 4.3954C9.25285 4.17182 9.3323 3.90983 9.33337 3.64168V3.50001C9.33337 3.05798 9.50897 2.63406 9.82153 2.3215C10.1341 2.00894 10.558 1.83334 11 1.83334C11.4421 1.83334 11.866 2.00894 12.1786 2.3215C12.4911 2.63406 12.6667 3.05798 12.6667 3.50001V3.57501C12.6678 3.84317 12.7472 4.10516 12.8953 4.32873C13.0434 4.55231 13.2536 4.72771 13.5 4.83334C13.7514 4.94427 14.0302 4.97736 14.3005 4.92835C14.5709 4.87933 14.8203 4.75046 15.0167 4.55834L15.0667 4.50834C15.2215 4.35338 15.4053 4.23045 15.6076 4.14658C15.81 4.0627 16.0268 4.01953 16.2459 4.01953C16.4649 4.01953 16.6818 4.0627 16.8841 4.14658C17.0864 4.23045 17.2703 4.35338 17.425 4.50834C17.58 4.66313 17.7029 4.84695 17.7868 5.04928C17.8707 5.25161 17.9139 5.46848 17.9139 5.68751C17.9139 5.90654 17.8707 6.12341 17.7868 6.32574C17.7029 6.52807 17.58 6.71189 17.425 6.86668L17.375 6.91668C17.1829 7.11308 17.0541 7.36252 17.005 7.63285C16.956 7.90318 16.9891 8.182 17.1 8.43334V8.50001C17.2057 8.74648 17.3811 8.95669 17.6047 9.10475C17.8282 9.25282 18.0902 9.33227 18.3584 9.33334H18.5C18.9421 9.33334 19.366 9.50894 19.6786 9.8215C19.9911 10.1341 20.1667 10.558 20.1667 11C20.1667 11.442 19.9911 11.866 19.6786 12.1785C19.366 12.4911 18.9421 12.6667 18.5 12.6667H18.425C18.1569 12.6677 17.8949 12.7472 17.6713 12.8953C17.4477 13.0433 17.2723 13.2535 17.1667 13.5V13.5Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>
+                                Settings
+                            </span>
+                        </a>
+                    </li>
+
+                    <hr>
+
+                    <li>
+                        <a href="help.html" class="menu_item fill ">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.94395 4.3645C9.04328 4.36564 8.17982 4.72394 7.54295 5.36082C6.90607 5.99769 6.54777 6.86115 6.54663 7.76182H8.27379C8.27379 6.84038 9.02338 6.09166 9.94395 6.09166C10.8645 6.09166 11.6141 6.84038 11.6141 7.76182C11.6141 8.27824 11.1987 8.65304 10.564 9.166C10.3566 9.32844 10.1575 9.50108 9.96727 9.68329C9.10542 10.5443 9.08037 11.4588 9.08037 11.5607V12.1367H10.8075L10.8067 11.5901C10.8075 11.5763 10.8352 11.2567 11.1875 10.9053C11.317 10.7757 11.4803 10.6462 11.6495 10.5097C12.3223 9.96482 13.3404 9.14182 13.3404 7.76182C13.3397 6.86116 12.9817 5.99757 12.3449 5.36062C11.7081 4.72367 10.8446 4.36542 9.94395 4.3645ZM9.08037 13.0003H10.8075V14.7275H9.08037V13.0003Z"
+                                    fill="white" />
+                                <path
+                                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM10 18C5.589 18 2 14.411 2 10C2 5.589 5.589 2 10 2C14.411 2 18 5.589 18 10C18 14.411 14.411 18 10 18Z"
+                                    fill="white" />
+                            </svg>
+                            <span>
+                                Help
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html" class="menu_item ">
+                            <svg width="19" height="20" viewBox="0 0 19 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 1.75H15.6667C16.1529 1.75 16.6192 1.94315 16.963 2.28697C17.3068 2.63079 17.5 3.0971 17.5 3.58333V16.4167C17.5 16.9029 17.3068 17.3692 16.963 17.713C16.6192 18.0568 16.1529 18.25 15.6667 18.25H12"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M7.41663 14.5834L12 10.0001L7.41663 5.41675" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 10H1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                            <span>
+                                Log Out
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <hr style="margin: 20px auto;" />
+                <div class="tgLinks">
+                    <a href="index.html" class="chat">
+                        <img src="src/img/tg.svg" alt="tg">
+                        <span>Chat</span>
+                    </a>
+                    <a href="index.html" class="channel">
+                        <img src="src/img/tg.svg" alt="tg">
+                        <span>Channel</span>
+                    </a>
+
+                </div>
+            </menu>
+
+
+
+        </aside>
+
+        <main>
+            <h2>messages</h2>
+
+            <p class="messagesTitle">
+                Please, before using the web service <span>proxycrystal.com</span>, hereinafter referred to as the
+                "Service",
+                carefully
+                read these Terms. Your use of this Service automatically means your full agreement with all the
+                provisions
+                of these Terms. If you do not agree with at least one of the provisions of these Terms, then you are not
+                allowed to use the Service.
+            </p>
+
+            <p class="messagesTitle">
+                <span>Terms and Definitions</span>
+            </p>
+            <p class="messagesTitle">
+                User - an individual who accesses the Service.
+            </p>
+            <p class="messagesTitle">
+                User's payment details - the Qiwi wallet number, or other user identifiers in payment systems, through
+                which the user
+                paid for access to the service, including the email address specified by the buyer when purchasing to
+                deliver the
+                Premium access key.
+            </p>
+            <p class="messagesTitle">
+                <span>Description of the service</span>
+            </p>
+            <p class="messagesTitle">
+                Dedicated server - a computer with a permanent IP address located at the site of an organization that
+                officially provides services such as server rental, hosting, or co-location.
+            </p>
+            <p class="messagesTitle">
+                DThe Service provides the Users with an information service - access to the list of open proxy servers
+                that operate without authorization, do not belong to and are not controlled by the Service, collected
+                from publicly available Internet sources, verified and classified using the Service software, on a paid
+                (full access) and free (limited access) for personal use at your own risk, on your own responsibility on
+                an "as is" and "as available" basis.
+            </p>
+            <p class="messagesTitle">
+                The proxy list is updated once an hour. The actual timeout for checking proxy servers by the Service is
+                indicated on the description page proxoid.net/api.
+            </p>
+            <p class="messagesTitle">
+                For full access to the Service, the User must purchase a Premium access key. The key makes it possible
+                to get full access to the Service for a certain number of days after the moment of its activation (1, 7,
+                30 days). The key is activated at the time of its first use, when entered on the site, or when accessing
+                the service API. After activation, the key cannot be suspended. The key must be activated no later than
+                1 month from the date of purchase, after this period the key expires, the funds paid for the expired key
+                are not returned.
+            </p>
+            <p class="messagesTitle">
+                <span>Terms of use of the Service</span>
+            </p>
+
+            <p class="messagesTitle">
+                According to Art. 1259 of the Civil Code of the Russian Federation, the Service proxy database
+                collected, verified and classified using the Service software is the copyright object of the Service,
+                which does not require registration, the Service provides access to it exclusively for personal use, it
+                is prohibited to use the Premium access key to the Service, or proxy lists, provided by the Service, by
+                more than one User, transferring them to others, including resale, or publishing them in open sources.
+            </p>
+            <p class="messagesTitle">
+                The User can access the Service only from computers belonging to him personally, including Dedicated
+                Servers. It is
+                forbidden to collect proxies using intermediate servers used for further distribution of the list. Mass
+                collection of
+                proxies by parsing the web interface of the service is prohibited. It is forbidden to access the API of
+                the Service in
+                excess of the established limits (the current limits are indicated in the API description), including
+                calls to the API
+                using proxy servers and / or the TOR network.
+            </p>
+        </main>
+
+        <aside class="right">
+            <a href="messages.html">
+                <img class="bell" src="src/img/bell.svg" alt="bell">
+            </a>
+
+            <div class="personCard">
+                <div class="personTop">
+                    <img src="src/img/andy.png" alt="andy" class="avatar">
+                    <div class="name">
+                        <span class="ofname">Andy Warhol</span>
+                        <span class="nickname">@andyWarhol</span>
+                    </div>
+
+                    <img src="src/img/dots.svg" alt="dots" class="dots">
+                </div>
+
+
+                <div class="license hide">
+                    The license will expire
+                    <span>22.09.2022</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+
+</html>
