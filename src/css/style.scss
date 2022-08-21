@@ -448,7 +448,7 @@ main {
         background-color: #0E0F14;
         width: 100%;
         border-radius: 5px;
-        padding: 0 24px;
+        padding: 0 20px;
 
         display: flex;
         align-items: center;
@@ -479,7 +479,7 @@ main {
                 transition: all 400ms;
 
                     svg, path {
-                        fill-opacity: 1;
+                        stroke-opacity: 1;
                     }
                 }
             }
